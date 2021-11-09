@@ -226,6 +226,8 @@ while run: # основной цикл
         p.display.flip() # обновение экрана
     if s>0: # если счётчик больше 0
         s = s - 1 # уменьшение счётчика
+    cout = f.render(str(s), False, (0, 0, 0))
+    scr.blit(cout, (1100/2, 0))
     all.update() # вызов функции движения игрока
     p.display.flip() # обновление эерана
     clock.tick(FPS)#задержка
